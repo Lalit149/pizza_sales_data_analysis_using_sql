@@ -22,10 +22,6 @@ join pizzas p
 
 
 
-
-
-
-
 -- 3. Identify the highest-priced pizza.
 
 SELECT 
@@ -39,6 +35,7 @@ LIMIT 1;
 
 
 -- 4.Identify the 5 most common pizza size ordered.
+
 SELECT 
     *
 FROM
@@ -55,6 +52,7 @@ LIMIT 5;
 
 
 -- 5. List the top 5 most ordered pizza types along with their quantities.
+
 SELECT 
     p1.name AS `name`, SUM(o.quantity) AS quantity
 FROM
@@ -96,6 +94,8 @@ FROM
     orders
 GROUP BY hour; 
 
+
+
 -- 7. Join relevant tables to find the category-wise distribution of pizzas.
 
 SELECT 
@@ -107,6 +107,7 @@ FROM
         JOIN
     pizza_types pt ON p.pizza_type_id = pt.pizza_type_id
 GROUP BY category;
+
 
 
 -- 8.Group the orders by date and calculate the average number of pizzas ordered per day.
